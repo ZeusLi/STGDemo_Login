@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>飞机大战</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="css/flygame.css">
+ </head>
+
+ <body style="overflow:hidden;">
+  <!-- <div>元素 - 完成布局 -->
+  <main id="content" style="overflow:hidden">
+	<div class="contentpage" id="main" style="z-index:3;" v-show="!isgame">
+
+		<div id="div_global_loading" class="div_global_loading" v-show="loading" >
+            <div class="spinner">
+                <div class="double-bounce1"></div>
+                <div class="double-bounce2"></div>
+            </div>
+            <p style="margin-top:10px;">{{loadingText}}</p>
+		</div>
+		
+		<!-- 返回按钮 -->
+		<div class="return" v-show="now!='index'&&now!='menu'&&!loading" @click="back()">
+			<img src="images/return.png" alt="">
+		</div>
+
+		<!-- 通过账户密码登陆 -->
+		<div class="login" v-show="now=='index'">
+			<button class="dl btn" @click="now='login'">通过账户密码登陆</button>
+		</div>
+
+		<!-- 登陆 -->
+		<div class="userlogin" v-show="now=='login'&&!loading">
+			<h3>用户登陆</h3>
+			<label for="username">账户名</label>
+			<input type="text" v-model="account_name" class="input_username" name="username" placeholder="请输入您的账户名" value="" />	
+			<label for="pwd">密码</label>
+			<input type="password" v-model="pwd" class="input_pwd" name="pwd" placeholder="请输入您的密码" value="" />		
+			<button type="submit" class="btn" @click.prevent="login()">确认</button>
+		</div>
+
+		<!-- 个人中心 -->
+		<div class="usercenter" v-show="now=='usercenter'">
+			<h3>个人中心</h3>
+			<ul>
+				<li>个人信息</li>
+				<li>账户: {{accountinfo.account_name}}</li>
+			</ul>
+			<!-- <button class="btn">退出登陆</button> -->
+		</div>
+
+		<!-- 菜单选择 -->
+		<ul class="haslogin" v-show="now=='menu'">
+			<li id="gamestart" @click="choiseplant()"><span></span><span>玩游戏</span></li>
+			<li id="market" @click="now='trade'" v-show="false"><span></span><span>交易</span></li>
+			<li id="usercenter" @click="now='usercenter'"><span></span><span>个人中心</span></li>
+		</ul>
+
+		<!-- 飞机选择 -->
+		<div class="choiseplant" v-if="now=='choiseplant'&&!loading">
+			<h3>选择您的战机</h3>
+			<ul>
+				<li @click="change(1)" :class="{active:nowplant==1,none:nowlists.indexOf('1')==-1}"><img src="./images/hero1.png" alt=""><span>维拉托尔级</span></li>
+				<li @click="change(2)" :class="{active:nowplant==2,none:nowlists.indexOf('2')==-1}"><img src="./images/hero_1.png" alt=""><span>恩尤级</span></li>
+				<li @click="change(3)" :class="{active:nowplant==3,none:nowlists.indexOf('3')==-1}" style="margin-top:20px;"><img src="./images/hero_3.png" alt=""><span>猛禽级</span></li>
+			</ul>
+			<button class="btn" @click="playgame()">开始游戏</button>
+		</div>
+	</div>
+	<div id="hidepanel" style="position:absolute;width:100%;height:100%;background-color:rgba(0,0,0,0.4);z-index:2;">
+
+	</div>
+	<div id="sssssss" style="position:absolute;width:100%;height:100%;background-color:rgba(0,0,0,1);z-index:999999;display:block;">
+		<h1 style="color: #fff;
+    line-height: 650px;">加载中...</h1>
+	</div>
+	<!-- <canvas>元素 -->
+	<canvas id="canvas" width="480px" height="650px"></canvas>
+  </main>
+  <script src="js/vue.js"></script>
+  <script type="text/javascript" src="bcx.min.js"></script>
+</body>
+<script>
+	window.onload = function(){
+		var hide = document.getElementById('sssssss');
+		hide.style.display = "none";
+	}
+</script>
+<script src="js/basic.js"></script>
+<script src="js/app.js"></script>
+</html>

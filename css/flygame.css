@@ -1,0 +1,273 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'microsoft yahei'; }
+
+ul {
+  list-style: none; }
+
+button.btn {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  outline: none;
+  display: block;
+  margin: 0 auto;
+  border-radius: 4px;
+  letter-spacing: 1px;
+  background-color: #00b6ad;
+  border-color: #009d95;
+  color: #fff; }
+
+main {
+  margin: 0 auto;
+  width: 480px;
+  height: 650px;
+  background: #323232;
+  text-align: center;
+  position: relative;
+  vertical-align: middle; }
+  main > div.contentpage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 340px;
+    height: 345px;
+    margin: auto;
+    background-color: white;
+    border-radius: 4px;
+    padding: 20px; }
+  main > div > div.return {
+    position: absolute;
+    text-align: left;
+    padding: 0; }
+    main > div > div.return > img {
+      width: 40px;
+      height: 40px; }
+  main > div > div.login {
+    margin-top: 142.5px; }
+    main > div > div.login > button:last-child {
+      margin-top: 20px; }
+  main > div > div label {
+    display: none; }
+  main > div > div h3 {
+    margin-top: 5px;
+    margin-bottom: 20px;
+    font-size: 24px; }
+  main > div > div input {
+    width: 100%;
+    padding: 10px;
+    display: block;
+    margin: 0px auto 20px auto;
+    border: 2px solid #999;
+    background-color: #fff;
+    border-radius: 4px;
+    color: #696f6f; }
+  main > div > div.userlogin > input:first-child {
+    margin-top: 81.25px; }
+  main > div > div.trade > ul.table {
+    border: 2px solid #999;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    main > div > div.trade > ul.table > li {
+      padding: 5px 0;
+      display: inline-block; }
+      main > div > div.trade > ul.table > li:first-child {
+        width: 20%; }
+      main > div > div.trade > ul.table > li:last-child {
+        width: 30%; }
+        main > div > div.trade > ul.table > li:last-child > button {
+          border: none;
+          outline: none;
+          background-color: #00b6ad;
+          padding: 5px;
+          width: 80%;
+          color: #fff;
+          border-radius: 4px;
+          letter-spacing: 4px;
+          cursor: pointer; }
+      main > div > div.trade > ul.table > li:nth-child(2) {
+        width: 50%;
+        border-left: 2px solid #999;
+        border-right: 2px solid #999; }
+  main > div > div.trade > ul.choiselist {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    main > div > div.trade > ul.choiselist > li {
+      -webkit-box-flex: 1;
+          -ms-flex: 1;
+              flex: 1;
+      border: 2px solid #999;
+      border-radius: 5px 5px 0 0;
+      border-bottom: none; }
+      main > div > div.trade > ul.choiselist > li.active {
+        background-color: red;
+        color: #fff; }
+  main > div > div.trade div.hide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6); }
+    main > div > div.trade div.hide > div {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto; }
+      main > div > div.trade div.hide > div.input {
+        width: 100%;
+        height: 80px; }
+      main > div > div.trade div.hide > div.info {
+        width: 80%;
+        height: 60px;
+        line-height: 60px;
+        border-radius: 5px;
+        letter-spacing: 4px;
+        color: #909090;
+        background-color: rgba(255, 255, 255, 0.6); }
+  main > div > div.usercenter > ul > li {
+    list-style: none;
+    border: 2px solid #999;
+    border-radius: 4px;
+    color: #696f6f;
+    width: 84%;
+    padding: 5px 0;
+    margin: 0 auto 20px auto; }
+  main > div > div legend h3 {
+    margin: 0 10px; }
+  main > div > div.choiseplant > ul {
+    margin-bottom: 50px; }
+    main > div > div.choiseplant > ul > li {
+      text-align: center;
+      border: 1px solid #000;
+      border-radius: 5px;
+      width: 40%;
+      display: inline-block; }
+      main > div > div.choiseplant > ul > li.active {
+        border-color: red;
+        cursor: pointer; }
+      main > div > div.choiseplant > ul > li.none {
+        border-style: dashed;
+        border-color: #ddd; }
+        main > div > div.choiseplant > ul > li.none > span {
+          color: #ddd; }
+      main > div > div.choiseplant > ul > li > img {
+        width: 40px;
+        display: block;
+        margin: 0 auto; }
+  main > div > ul.haslogin {
+    list-style: none; }
+    main > div > ul.haslogin > li {
+      padding: 5px;
+      margin: 50px;
+      border: 2px solid #999;
+      border-radius: 4px;
+      color: #696f6f;
+      background-color: #00b6ad;
+      border-color: #009d95;
+      color: #fff; }
+  main > canvas {
+    margin: 0 auto; }
+
+
+*{
+  box-sizing: border-box;
+}
+.input_username,.input_pwd{
+  width: 100%;
+}
+.input_username{
+  margin-top: 53px;
+}
+.spinner {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  margin: auto auto;
+}
+
+.double-bounce1, .double-bounce2 {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #00b6ad;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-animation: bounce 2.0s infinite ease-in-out;
+  animation: bounce 2.0s infinite ease-in-out;
+}
+
+.double-bounce2 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+@-webkit-keyframes bounce {
+  0%, 100% {
+      -webkit-transform: scale(0.0)
+  }
+
+  50% {
+      -webkit-transform: scale(1.0)
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+      transform: scale(0.0);
+      -webkit-transform: scale(0.0);
+  }
+
+  50% {
+      transform: scale(1.0);
+      -webkit-transform: scale(1.0);
+  }
+}
+
+.div_global_loading {
+  margin:70px auto;
+  text-align:center;
+}
+
+.div_global_loading p {
+  text-align: center;
+  color: #00b6ad;
+}
+
+.div_loading_container{
+  position: absolute;
+  top:0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000;
+  display: flex;
+  z-index: 10000;
+}
+
+.contentpage{
+  /* display: flex; */
+}
