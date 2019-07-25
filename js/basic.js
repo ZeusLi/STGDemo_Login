@@ -87,25 +87,7 @@ var main = new Vue({
                 }
             })
         },
-        //获取并保存账户信息
-        getData(ii = false){
-            bcx.queryAccountNHAssets({
-                account:this.accountinfo.account_name,
-                page:1,
-                pageSize:10
-            }).then(res=>{
-                console.info("res",res);
-                if(res.code==1){
-                    this.NHAssets=res.data;
-                    // this.total=res.total
-
-                   if(ii){
-                     this.now = 'choiseplant';
-                   }
-                }
-            })
       
-        },
         //返回按钮
         back(){
             this.now == "login" || this.now == "logup"?
